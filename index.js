@@ -256,6 +256,7 @@ function isElement(x) {
     if (typeof HTMLElement !== 'undefined' && x instanceof HTMLElement) {
         return true;
     }
+    return false;
     return typeof x.nodeName === 'string' && typeof x.getAttribute === 'function';
 }
 
