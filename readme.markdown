@@ -1,59 +1,55 @@
 # object-inspect
+> Fork of [object-inspect](https://github.com/inspect-js/object-inspect) to add support for newlines, indentation and slight modifications to the output.
 
-string representations of objects in node and the browser
+Convert Javascript datatypes to their string representation. Handles every in-built data type including.
 
-[![build status](https://secure.travis-ci.com/inspect-js/object-inspect.png)](https://travis-ci.com/inspect-js/object-inspect)
+- Objects
+- Arrays
+- BigInt
+- Symbols
+- Map/WeakMap
+- Set/WeakSet
+- Date
+- RegExp
+- Object literals
+- Classes
+- String
+- Boolean
+- Number
+- Null
+- Undefined
+- Error
+- Buffer
 
-# example
+> **This module will be re-written from scratch soon. So please, do not send any PR's for improvements. However, feel free to report issues and they will be picked up during re-write**.
 
-## circular
+## Installation
 
-``` js
-var inspect = require('object-inspect');
-var obj = { a: 1, b: [3,4] };
-obj.c = obj;
-console.log(inspect(obj));
+Install the package from npm registry as follows
+
+```sh
+npm install @poppinss/object-inspect
 ```
 
-## dom element
+## Usage
 
-``` js
-var inspect = require('object-inspect');
-
-var d = document.createElement('div');
-d.setAttribute('id', 'beep');
-d.innerHTML = '<b>wooo</b><i>iiiii</i>';
-
-console.log(inspect([ d, { a: 3, b : 4, c: [5,6,[7,[8,[9]]]] } ]));
+```js
+const { inspect } = require('@poppinss/inspect')
+inspect({ foo: 'bar', bar: 'baz' })
 ```
 
-output:
+## Pretty print to HTML
 
-```
-[ <div id="beep">...</div>, { a: 3, b: 4, c: [ 5, 6, [ 7, [ 8, [ ... ] ] ] ] } ]
-```
-
-# methods
-
-``` js
-var inspect = require('object-inspect')
+```js
+const { stringify } = require('@poppinss/inspect')
+stringify.html({ foo: 'bar', bar: 'baz' })
 ```
 
-## var s = inspect(obj, opts={})
+## Credits
 
-Return a string `s` with the string representation of `obj` up to a depth of `opts.depth`.
+To the original [object-inspect](https://github.com/inspect-js/object-inspect) package. 90% of the code is still the same, we have just made opinionated changes to suit it better to our needs.
 
-Additional options:
-  - `quoteStyle`: must be "single" or "double", if present
+I didn't created a PR for the original package, since the modifications are very specific to serve our use case.
 
-# install
-
-With [npm](https://npmjs.org) do:
-
-```
-npm install object-inspect
-```
-
-# license
-
+# License
 MIT

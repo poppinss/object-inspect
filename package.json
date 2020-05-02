@@ -1,48 +1,35 @@
 {
-  "name": "object-inspect",
-  "version": "1.7.0",
-  "description": "string representations of objects in node and the browser",
+  "name": "@poppinss/inspect",
+  "version": "0.0.0",
+  "description": "Stringify Javascript values to a string or pretty print HTML",
   "main": "index.js",
   "devDependencies": {
     "@ljharb/eslint-config": "^16.0.0",
     "core-js": "^2.5.7",
     "endent": "^2.0.1",
     "eslint": "^6.8.0",
-    "nyc": "^10.3.2",
-    "safe-publish-latest": "^1.1.4",
+    "np": "^6.2.3",
     "tape": "^5.0.0"
   },
   "scripts": {
-    "prepublish": "safe-publish-latest",
     "pretest": "npm run lint",
     "lint": "eslint .",
     "test": "npm run tests-only",
     "pretests-only": "node test-core-js",
     "tests-only": "tape test/*.js",
-    "posttest": "npx aud --production",
-    "coverage": "nyc npm run tests-only"
+    "posttest": "npx aud --production"
   },
   "testling": {
     "files": [
       "test/*.js",
       "test/browser/*.js"
-    ],
-    "browsers": [
-      "ie/6..latest",
-      "chrome/latest",
-      "firefox/latest",
-      "safari/latest",
-      "opera/latest",
-      "iphone/latest",
-      "ipad/latest",
-      "android/latest"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/inspect-js/object-inspect.git"
+    "url": "git://github.com/thetutlage/object-inspect.git"
   },
-  "homepage": "https://github.com/inspect-js/object-inspect",
+  "homepage": "https://github.com/thetutlage/object-inspect",
   "keywords": [
     "inspect",
     "util.inspect",
@@ -50,11 +37,6 @@
     "stringify",
     "pretty"
   ],
-  "author": {
-    "name": "James Halliday",
-    "email": "mail@substack.net",
-    "url": "http://substack.net"
-  },
   "funding": {
     "url": "https://github.com/sponsors/ljharb"
   },
@@ -67,5 +49,13 @@
       "nyc",
       "core-js"
     ]
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/thetutlage/object-inspect/issues"
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "dependencies": {}
 }

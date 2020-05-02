@@ -1,6 +1,6 @@
 'use strict';
 
-var inspect = require('../');
+var { inspect } = require('../../');
 var Buffer = require('safer-buffer').Buffer;
 
 var holes = ['a', 'b'];
@@ -26,4 +26,6 @@ var obj = {
   now: new Date()
 };
 obj.self = obj;
+
 console.log(inspect(obj));
+JSON.parse(inspect(obj));
