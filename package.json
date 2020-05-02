@@ -1,6 +1,6 @@
 {
   "name": "@poppinss/inspect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Stringify Javascript values to a string or pretty print HTML",
   "main": "index.js",
   "files": [
