@@ -78,6 +78,7 @@ module.exports = class PrettyPrint {
 
     if (value.startsWith('"[Function')) {
       type = 'function';
+      value = value.substring(1, value.length - 1);
     } else if (value === '"undefined"') {
       type = 'undefined';
       value = 'undefined';
