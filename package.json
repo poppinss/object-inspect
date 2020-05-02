@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "Stringify Javascript values to a string or pretty print HTML",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "src"
+  ],
   "devDependencies": {
     "@ljharb/eslint-config": "^16.0.0",
     "core-js": "^2.5.7",
